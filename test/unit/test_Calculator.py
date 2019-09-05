@@ -1,6 +1,6 @@
 
 import unittest
-import pathmagic
+import pathmagic # noqa
 from src.Calculator import Calculator
 
 
