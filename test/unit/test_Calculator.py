@@ -9,7 +9,10 @@ class TestCalculate(unittest.TestCase):
         self.calci = Calculator()
 
     def test_add(self):
-        self.assertEqual(4, self.calci.add([2, 2]))
+        self.assertEqual(9, self.calci.add([2.0, 2.0, 5.0]))
+
+    def test_substract(self):
+        self.assertEqual(0, self.calci.subtract([2.0, 2.0]))
 
     def test_typeErr(self):
         self.assertRaises(TypeError, self.calci.add, 'Hello', 'World')
