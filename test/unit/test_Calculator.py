@@ -2,9 +2,11 @@
 import os
 import sys
 import unittest
-par_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+par_dir = os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+    )
 sys.path.insert(0, par_dir)
-from src.Calculator import Calculator
+from src.Calculator import Calculator  # noqa: E402
 
 
 class TestCalculate(unittest.TestCase):
