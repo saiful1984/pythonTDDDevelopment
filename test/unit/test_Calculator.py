@@ -1,7 +1,7 @@
 
 import unittest
 import pathmagic # noqa
-from src.Calculator import Calculator
+from Calculator import Calculator
 
 
 class TestCalculate(unittest.TestCase):
