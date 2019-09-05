@@ -12,7 +12,6 @@ class TestCalculate(unittest.TestCase):
         self.calci = Calculator()
 
     def test_add(self):
-        #test_list = [2, 2]
         self.assertEqual(4, self.calci.add([2, 2]))
 
     def test_typeErr(self):
