@@ -1,6 +1,8 @@
+"""Path hack to make tests work."""
+
 import os
 import sys
-par_dir = os.path.dirname(
-    os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-    )
-sys.path.insert(0, par_dir)
+
+bp = os.path.dirname(os.path.realpath('.')).split(os.sep)
+modpath = os.sep.join(bp + ['src'])
+sys.path.insert(0, modpath)
