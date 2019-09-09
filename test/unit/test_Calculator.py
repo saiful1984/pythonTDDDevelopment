@@ -14,8 +14,17 @@ class TestCalculate(unittest.TestCase):
     def test_substract(self):
         self.assertEqual(0, self.calci.subtract([2.0, 2.0]))
 
+    def test_multiply(self):
+        self.assertEqual(10, self.calci.multiply([5, 2]))
+
+    def test_division(self):
+        self.assertEqual(10, self.calci.division([20, 2]))
+
     def test_typeErr(self):
         self.assertRaises(TypeError, self.calci.add, 'Hello', 'World')
+
+    def zeroErr(self):
+        self.assertRaises(ZeroDivisionError, self.calci.division, 7, 0)
 
 
 if __name__ == "__main__":
