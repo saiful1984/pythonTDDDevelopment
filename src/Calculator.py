@@ -27,7 +27,11 @@ class Calculator:
             if type(item) == int or type(item) == float:
                 self.total = self.total * item
             else:
-                raise TypeError("Invalid type of args provided. Expected int or float got [{}]".format(type(item)))
+                raise TypeError(
+                    "Invalid type of args provided.\
+                         Expected int or float got [{}]"
+                    .format(type(item))
+                               )
         return self.total
 
     def division(self, provided_args):
@@ -39,5 +43,8 @@ class Calculator:
         except ZeroDivisionError:
             raise ZeroDivisionError("Illegal division by zero attempt")
         except TypeError:
-            raise TypeError("Invalid type of args provided. Expected int or float got [{}]".format(type(item)))
+            raise TypeError(
+                "Invalid type of args provided. Expected int or float got [{}]"
+                .format(type(item))
+                           )
         return self.total

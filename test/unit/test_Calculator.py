@@ -26,6 +26,9 @@ class TestCalculate(unittest.TestCase):
     def zeroErr(self):
         self.assertRaises(ZeroDivisionError, self.calci.division, 7, 0)
 
+    def cleanup(self):
+        del self.calci
+
 
 if __name__ == "__main__":
     unittest.main()
